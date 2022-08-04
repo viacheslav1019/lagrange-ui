@@ -1,0 +1,44 @@
+.settingsmodal {
+  padding: 20px;
+  border-radius: 5px;
+  background: #ffffff;
+}
+
+.ThemeSettings {
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 5px;
+  .button-group-container {
+    background-color: #a4a4a4;
+    border: 1px solid #a4a4a4;
+    .theme-setting-button {
+      background-color: #ffffff;
+      cursor: pointer;
+      &.active {
+        background-color: transparent;
+        &:hover {
+          cursor: not-allowed;
+        }
+      }
+    }
+  }
+}
+
+[data-theme='Dark'] {
+  .settingsmodal {
+    background: #393939;
+  }
+  .ThemeSettings {
+    background-color: #393939;
+    .button-group-container {
+      background-color: #2b2b2b;
+      border: 1px solid #2b2b2b;
+      .theme-setting-button {
+        background-color: #393939;
+        &.active {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

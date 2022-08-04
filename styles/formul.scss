@@ -1,0 +1,85 @@
+@mixin size($w: 100%, $h: '', $mw: '', $mh: '', $minh: '') {
+  width: $w;
+  height: $h;
+  max-width: $mw;
+  max-height: $mh;
+  min-height: $minh;
+}
+
+@mixin font($fw: 400, $fm: '', $fs: '', $c: '', $ta: '', $lh: '', $ls: '') {
+  font-weight: $fw;
+  font-family: $fm;
+  font-size: $fs;
+  color: $c;
+  text-align: $ta;
+  line-height: $lh;
+  letter-spacing: $ls;
+}
+
+@mixin displayflex($fd: row, $ai: center, $jc: center) {
+  display: flex;
+  flex-direction: $fd;
+  align-items: $ai;
+  justify-content: $jc;
+}
+
+@mixin mp($m: '', $p: '') {
+  margin: $m;
+  padding: $p;
+}
+@mixin border() {
+  border: 2px solid red;
+}
+
+@mixin media(
+  $d: '',
+  $w: '',
+  $mw: '',
+  $fs: '',
+  $h: '',
+  $p: '',
+  $m: '',
+  $fd: '',
+  $c: '',
+  $di: '',
+  $lh: '',
+  $fw: '',
+  $miw: '',
+  $ta: '',
+  $b: ''
+) {
+  @media screen and (max-width: $d) {
+    display: $di;
+    width: $w;
+    max-width: $mw;
+    min-width: $miw;
+    height: $h;
+    padding: $p;
+    margin: $m;
+    flex-direction: $fd;
+    font-size: $fs;
+    color: $c;
+    line-height: $lh;
+    flex-wrap: $fw;
+    text-align: $ta;
+    border: $b;
+  }
+}
+
+@mixin brauzer($br: '') {
+  -moz-border-radius: $br !important;
+  -webkit-border-radius: $br !important;
+  -ms-border-radius: $br !important;
+  -o-border-radius: $br !important;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+}
+
+@mixin background($bp: '', $br: '', $bs: '') {
+  background-position: $bp;
+  background-repeat: $br;
+  background-size: $bs;
+}

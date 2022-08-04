@@ -1,0 +1,102 @@
+@import './formul.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,300;0,400;0,500;0,600;1,200&display=swap');
+
+/* dark mode begin */
+
+[data-theme='Dark'] {
+  .Overwiew {
+    color: #ffffff;
+    .table-border-div {
+      background: #2b2b2b;
+    }
+  }
+}
+/* dark mode end  */
+
+.Overwiew {
+  @include displayflex($fd: column);
+  padding: clamp(10px, 2.77vw, 40px);
+  color: #000000;
+
+  .table-border-divp {
+    @media screen and (max-width: 600px) {
+      overflow-x: auto;
+    }
+  }
+  .table-border-div {
+    background: #fafafa;
+    @media screen and (max-width: 600px) {
+      width: 90vw;
+      @include displayflex();
+    }
+    border-radius: 6px;
+    @include size(
+      $w: clamp(420px, 69.1666vw, 996px),
+      $h: clamp(250px, 31.3888vw, 452px)
+    );
+    box-shadow: 0px 7px 14px rgba(0, 0, 0, 0.08);
+    border-radius: 6px;
+    @include mp(
+      $p: clamp(20px, 2.2222vw, 32px) clamp(30px, 6.9444vw, 100px)
+        clamp(20px, 2.2222vw, 32px) clamp(20px, 4.0277vw, 58px)
+    );
+    table {
+      @include size($w: 100%, $h: 100%);
+      @include font(
+        $fm: Montserrat,
+        $fw: 500,
+        $fs: clamp(10px, 1.25vw, 18px),
+        $ta: center
+      );
+      border-collapse: collapse;
+      .image-and-coin-name {
+        @include displayflex();
+        .img-icon {
+          @include mp($m: 0 0.6944vw 0 0);
+          @include size(
+            $w: clamp(17px, 2.2222vw, 32px),
+            $h: clamp(17px, 2.2222vw, 32px)
+          );
+        }
+      }
+      th,
+      td {
+        border: 1px solid #e6e6e6;
+      }
+      td:nth-child(1) {
+        border: 0px solid red;
+      }
+      td:nth-child(2),
+      td:nth-child(3),
+      td:nth-child(4),
+      td:nth-child(5) {
+        border-right: 0px solid red;
+        border-bottom: 0px solid red;
+        border-top: 0px solid red;
+      }
+      th:nth-child(1),
+      th:nth-child(2),
+      th:nth-child(3),
+      th:nth-child(4),
+      th:nth-child(5) {
+        border-right: 0px solid red;
+        border-bottom: 0px solid red;
+        border-top: 0px solid red;
+      }
+      th {
+        border-top: none;
+      }
+      tr:last-child td {
+        border-bottom: none;
+      }
+      th:first-child,
+      td:first-child {
+        border-left: none;
+      }
+      th:last-child,
+      td:last-child {
+        border-right: none;
+      }
+    }
+  }
+}

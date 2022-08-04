@@ -1,0 +1,609 @@
+@import './formul.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+.test {
+  border: 1px solid yellow;
+}
+.white-border {
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  @include size(
+    $w: clamp(70px, 6.9444vw, 100px),
+    $h: clamp(30px, 2.4305vw, 35px)
+  );
+  @include font(
+    $fm: 'Roboto',
+    $fw: 400,
+    $fs: clamp(14px, 1.25vw, 18px),
+    $c: #ffffff,
+    $ls: 0.3px
+  );
+}
+.when-disconnected {
+  @include font(
+    $fm: 'Roboto',
+    $fw: 400!important,
+    $fs: clamp(10px, 0.9722vw, 14px),
+    $c: #ffffff,
+    $ta: left,
+    $ls: 0.3px
+  );
+  background: #000000;
+}
+.responsive-design-grid-layout {
+  width: 100%;
+  @include displayflex($fd: column, $ai: center, $jc: center);
+}
+
+// ---------------------General Divs Styles Start-----------------------
+.chart1 {
+  top: 0;
+  left: 0;
+  background: #fafafa;
+  box-shadow: 0px 7px 14px rgb(0 0 0 / 8%);
+  color: #ffffff;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  @include mp($m: 20px 0 0 0);
+  // @include media($d: 930px, $w: clamp(280px, 75.2688vw, 700px));
+}
+.account-info {
+  @include size(
+    $w: clamp(300px, 31.25vw, 450px),
+    $h: clamp(380px, 36.0416vw, 519px)
+  );
+  background: #000000;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  @include mp($m: 20px 0 0 15px, $p: 0);
+  @include media(
+    $d: 930px,
+    $m: 20px 10px 0 10px,
+    $w: clamp(280px, 48.387vw, 450px)
+  );
+}
+.order-book-div {
+  @include mp($m: 20px 0 0, $p: 0px);
+  background: #fafafa;
+  box-shadow: 0px 7px 14px rgb(0 0 0 / 8%);
+  border-radius: 10px;
+  // @include media($d: 1300px, $p: 0 0 405px 0);
+  // @include media($d: 930px, $w: clamp(280px, 48.387vw, 450px));
+}
+.trade-form-div {
+  @include mp($m: 20px 0 0, $p: 0px);
+  background: #fafafa;
+  box-shadow: 0px 7px 14px rgb(0 0 0 / 8%);
+  border-radius: 10px;
+  // @include media($d: 930px, $w: clamp(280px, 48.387vw, 450px));
+}
+.usdt-usdc-position-div {
+  @include size(
+    $w: clamp(300px, 31.3888vw, 452px),
+    $h: clamp(380px, 29.8611vw, 430px)
+  );
+  @include mp($m: 20px 10px 0 10px, $p: 0px);
+  background: #000000;
+  box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  @include media($d: 930px, $w: clamp(280px, 48.387vw, 450px));
+}
+
+.recent-trade-div {
+  @include size($h: clamp(300px, 33.84027vw, 300px));
+  @include mp($m: 20px 0 0, $p: 0 0 20px 0);
+  background: #fafafa;
+  box-shadow: 0px 7px 14px rgb(0 0 0 / 8%);
+  border-radius: 10px;
+  // @include media($d: 1280px, $h: clamp(380px, 29.8611vw, 430px));
+  // @include media($d: 930px, $w: clamp(280px, 48.387vw, 450px));
+}
+
+.three-line {
+  @include displayflex($fd: row, $ai: center, $jc: center);
+  @include media($d: 930px, $fd: column);
+
+  .balances-orders-fixed {
+    @include size(
+      $w: clamp(300px, 64.375vw, 927px),
+      $h: clamp(380px, 33.84027vw, 481px)
+    );
+    @include mp($m: 20px 10px 0 10px, $p: 0px);
+    background: #000000;
+    box-shadow: 3px 4px 10px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    @include media($d: 930px, $w: clamp(280px, 75.2688vw, 700px));
+  }
+}
+
+// ---------------------General Divs Styles End-------------------------
+
+// -----------------------Account Styles Start--------------------------
+.account-title {
+  @include mp($m: 0 0 25px 0);
+  @include font(
+    $fm: 'Roboto',
+    $fw: 500,
+    $fs: clamp(18px, 2.4305vw, 35px),
+    $c: #ffffff,
+    $ta: left,
+    $ls: 0.3px
+  );
+}
+.account-twith {
+  @include displayflex($ai: space-between, $jc: center, $fd: column);
+  @include size($w: 100%, $h: 100%);
+  .account-in-write {
+    @include displayflex($ai: space-between, $jc: space-between, $fd: column);
+    @include size($w: 100%, $h: 100%);
+    @include font(
+      $fm: 'Roboto',
+      $fw: 400,
+      $fs: clamp(16px, 1.5277vw, 22px),
+      $lh: 24px,
+      $c: #ffffff,
+      $ls: 0.3px
+    );
+    .word-width {
+      width: 50%;
+    }
+  }
+  .deposite-button {
+    @include size(
+      $w: clamp(100px, 13.75vw, 198px),
+      $h: clamp(42px, 3.6111vw, 52px)
+    );
+    @include font(
+      $fm: 'Roboto',
+      $fw: 500,
+      $fs: clamp(16px, 1.8055vw, 26px),
+      $c: #000000,
+      $ta: center,
+      $ls: 0.3px
+    );
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background-color: #ffffff;
+  }
+  .withdraw-button {
+    @include size(
+      $w: clamp(100px, 13.75vw, 198px),
+      $h: clamp(42px, 3.6111vw, 52px)
+    );
+    @include font(
+      $fm: 'Roboto',
+      $fw: 500,
+      $fs: clamp(16px, 1.8055vw, 26px),
+      $c: #ffffff,
+      $ta: center,
+      $ls: 0.3px
+    );
+    border: 1px solid #ffffff;
+    border-radius: 4px;
+    background-color: #000000;
+  }
+  .buttons {
+    // margin-top: 106px;
+    @include mp(clamp(30px, 7.3611px, 106px) 0 0 0);
+  }
+}
+
+// -----------------------Account Styles End--------------------------
+
+// -----------------------OrderBook Styles Start----------------------
+
+.orderbook-title {
+  @include size($w: 100%);
+  @include mp($m: 4px 0 12px 0);
+  @include font($fm: 'Roboto', $fw: 900, $fs: 14px, $ta: left, $ls: 0.3px);
+  // @include media($d: 1370px, $m: 4px 0 0 0);
+}
+.orderbook-coins-title {
+  @include mp($m: 0 0 15px 0);
+  @include displayflex($ai: center, $jc: space-between);
+  @include font($fm: 'Roboto', $fw: 400, $fs: 12px, $c: #7d7c7c, $ls: 0.3px);
+  @include media($d: 1370px, $m: 4px 0 0 0);
+}
+.orderbook-numbers-general {
+  @include size($h: 86%);
+  @include media($d: 768px, $h: 80%);
+  // overflow-y: scroll;
+  // border: 1px solid red;
+  .orderbook-div-numbers {
+    // border: 1px solid red;
+    @include size($h: 100%);
+  }
+}
+.counts-simple {
+  @include font($fm: 'Roboto', $fw: 500, $fs: 14px, $c: #000000, $ls: 0.3px);
+  // margin-top: 6px;
+  @include mp($m: 6px 0 0 0);
+}
+.counts-back-green {
+  // height: clamp(15px, 1.4583vw, 21px);
+  @include mp($m: 6px 0 0 0, $p: 0 10px 0 20px);
+  background: rgba(25, 158, 54, 1);
+  @include font($fm: 'Roboto', $fw: 400, $fs: 14px, $c: #ffffff, $ls: 0.3px);
+}
+.counts-back-red {
+  // height: clamp(15px, 1.4583vw, 21px);
+  @include mp($m: 6px 0 0 0, $p: 0 20px 0 10px);
+  background: rgba(158, 25, 25, 1);
+  @include font($fm: 'Roboto', $fw: 400, $fs: 14px, $c: #ffffff, $ls: 0.3px);
+}
+
+// -----------------------OrderBook Styles End------------------------
+
+// -----------------------Trade Form Styles Start----------------------
+.tradeform-general {
+  @include size($h: 100%);
+  @include mp($p: 0);
+  @include media($d: 768px, $p: 10px 10px);
+  .tradeform-title {
+    @include size($w: 100%);
+    @include mp($m: 4px 0 12px 0);
+    @include font($fm: 'Roboto', $fw: 900, $fs: 14px, $ta: left, $ls: 0.3px);
+  }
+  .buy-sell-title {
+    background: #ededed;
+    // @include mp($m: 9px 0 0 0);
+    border-radius: 6px;
+    .active-buy-sel-border {
+      &.buy-sell-buttons {
+        border: none;
+        background: transparent;
+      }
+    }
+
+    .buy-sell-buttons {
+      background: #ffffff;
+      border: 1px solid #ededed;
+      border-radius: 6px;
+      @include font(
+        $fm: 'Roboto',
+        $fw: 500,
+        $fs: 14px,
+        $c: white,
+        $ta: left,
+        $ls: 0.3px
+      );
+      @include media($d: 930px, $m: -5px 0 0 0);
+      &.buy {
+        color: #007c47;
+      }
+      &.sell {
+        color: #cf304a;
+      }
+    }
+  }
+  .all-inputs-div {
+    @include mp($m: clamp(10px, 1.3888vw, 20px) 0 0 0);
+    .mini-labels {
+      @include font($fm: 'Roboto', $fw: 500, $fs: 12px, $ta: left, $ls: 0.3px);
+    }
+    .select-option-border {
+      padding-left: 8px;
+      @include media($d: 930px, $w: 100%, $h: 30px);
+      .select-option-words {
+        @include font(
+          $fm: 'Roboto',
+          $fw: 500,
+          $fs: clamp(10px, 0.9722vw, 14px),
+          $ta: left,
+          $ls: 0.3px
+        );
+      }
+    }
+  }
+  .percent-word-color {
+    @include font(
+      $fm: 'Roboto',
+      $fw: 500,
+      $fs: clamp(10px, 0.9722vw, 14px),
+      $c: #ffffff,
+      $ta: left,
+      $ls: 0.3px
+    );
+  }
+  .limit-word-color {
+    @include font(
+      $fm: 'Roboto',
+      $fw: 400,
+      $fs: clamp(12px, 1.1111vw, 16px),
+      $c: #ffffff,
+      $ta: left,
+      $ls: 0.3px
+    );
+  }
+  .buy-sol-perp {
+    @include font(
+      $fm: 'Roboto',
+      $fw: 400,
+      $fs: clamp(16px, 1.3888vw, 20px),
+      $c: #ffffff,
+      $ta: left,
+      $ls: 0.3px
+    );
+  }
+  .tradeform-end-div {
+    @include mp($m: clamp(5px, 0.6944vw, 10px) 0 0 0);
+    @include font(
+      $fm: 'Roboto',
+      $fw: 400,
+      $fs: clamp(11px, 0.8333vw, 12px),
+      $c: #ffffff,
+      $ta: left,
+      $ls: 0.3px
+    );
+  }
+  .checkbox-border {
+    border: 1px solid rgba(120, 120, 120, 1);
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  .check-text {
+    @include font(
+      $fm: 'Roboto',
+      $fw: 400,
+      $fs: clamp(10px, 0.8333vw, 12px),
+      $ta: left,
+      $ls: 0.3px
+    );
+  }
+  .nowrap {
+    @include mp($m: clamp(5px, 0.6944vw, 10px) 0 0 0);
+    @include displayflex($fd: row, $ai: center, $jc: flex-start);
+  }
+  // .ioc-check{
+  //     margin-top: 2px;
+  // }
+  .tradeform-buy-buton {
+    background: #787878;
+    border-radius: 4px;
+    @include mp($m: clamp(8px, 1.0416vw, 15px) auto 0);
+    @include font(
+      $fm: 'Roboto',
+      $fw: 400,
+      $fs: clamp(15px, 1.3888vw, 20px),
+      $c: #ffffff,
+      $ta: left,
+      $ls: 0.3px
+    );
+    @include size($h: clamp(25px, 2.7083vw, 39px));
+  }
+  .tradeform-persent-text-general {
+    // width: 100%;
+    // @include mp($m: clamp(5px,0.9722vw, 14px) 0 0 0);
+    @include displayflex($fd: row, $ai: center, $jc: space-between);
+    @include size($w: clamp(240px, 28.6111vw, 412px), $h: 30px);
+    .tradeform-persent-text {
+      background: #0e0e0e;
+      border-radius: 4px;
+      @include size($w: clamp(45px, 4.9305vw, 71px) !important, $h: 19px);
+      @include font(
+        $fm: 'Roboto',
+        $fw: 400,
+        $fs: clamp(11px, 0.9722vw, 14px),
+        $c: #ffffff,
+        $ta: center,
+        $ls: 0.3px
+      );
+    }
+  }
+}
+
+// -----------------------Trade Form Styles End-------------------------------
+
+// -----------------------SOL-PERP-Position Styles start----------------------
+.sol-perp-position-title {
+  @include font(
+    $fm: 'Roboto',
+    $fw: 500,
+    $fs: clamp(18px, 2.4305vw, 35px),
+    $c: #ffffff,
+    $ta: left,
+    $ls: 0.3px
+  );
+}
+
+.flex-div-row {
+  @include displayflex($fd: row, $ai: center, $jc: space-between);
+  @include size($w: 100%);
+
+  .sol-perp-position-down {
+    @include font(
+      $fm: 'Roboto',
+      $fw: 400,
+      $fs: clamp(16px, 1.5277vw, 22px),
+      $c: #ffffff,
+      $ls: 0.3px
+    );
+  }
+  .sol-perp-position-down-count {
+    @include font(
+      $fm: 'Roboto',
+      $fw: 400,
+      $fs: clamp(16px, 1.5277vw, 22px),
+      $c: #ffffff,
+      $ls: 0.3px
+    );
+  }
+  .sol-perp-position-down-yellow {
+    @include font(
+      $fm: 'Roboto',
+      $fw: 400,
+      $fs: clamp(16px, 1.5277vw, 22px),
+      $c: #ffff00,
+      $ls: 0.3px
+    );
+  }
+}
+
+// -----------------------SOL-PERP-Position Styles End------------------------
+
+// ----------------Recent Market Trades Styles Start--------------------------
+.recent-market-trade-title {
+  @include mp($p: 20px 0 12px);
+  @include font($fm: 'Roboto', $fw: 500, $fs: 14px, $ta: left, $ls: 0.3px);
+}
+.recent-market-trade-numbers-title {
+  @include mp($p: 0 1rem);
+  @include font($fm: 'Roboto', $fw: 500, $c: #7d7c7c, $fs: 12px, $ls: 0.3px);
+}
+.recent-market-trade-amount {
+  @include mp($p: 0 1rem);
+  @include font($fm: 'Roboto', $fw: 500, $c: #000000, $fs: 14px, $ls: 0.3px);
+}
+.recent-market-trade-numbers {
+  @include mp($p: 0 0.5rem 0 1rem);
+  height: 66%;
+  // @include media($d: 1400px, $h: 74%);
+  // border: 1px solid red;
+  overflow-y: scroll;
+  @include font(
+    $fm: 'Roboto',
+    $fw: 500,
+    $fs: clamp(14px, 1.25vw, 18px),
+    $c: #ffffff,
+    $ls: 0.3px
+  );
+}
+.thin-numbers {
+  @include font($fm: 'Roboto', $fw: 500, $c: #000000, $fs: 14px, $ls: 0.3px);
+}
+.orther-price {
+  @include font($fm: 'Roboto', $fw: 500, $fs: 14px, $ls: 0.3px);
+}
+.recent-market-trade-numbers::-webkit-scrollbar {
+  width: 5px;
+  background-color: transparent;
+}
+.recent-market-trade-numbers::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: #a4a4a4;
+}
+.recent-market-trade-numbers::-webkit-scrollbar-track {
+  background-color: inherit;
+}
+.recent-market-trade-numbers::-webkit-scrollbar-corner {
+  background-color: var(--bkg-3);
+}
+
+// ----------------Recent Market Trades Styles End----------------------------
+
+// ----------------Balances Orders Fixed Styles Start-------------------------
+
+.balances-title-general {
+  .balances-title-in {
+    border-bottom: 2px solid #888888;
+    @include size($w: clamp(280px, 61.4583vw, 885px));
+    margin: 0px auto;
+  }
+  .active-class {
+    border: 1px solid #ccc51b;
+  }
+  .balances-nav {
+    @include mp($p: 25px 0 23px 0, $m: 0px auto);
+    @include font(
+      $fm: 'Roboto',
+      $fw: 500,
+      $fs: clamp(10px, 1.3888vw, 20px),
+      $c: #ffffff,
+      $ta: left,
+      $ls: 0.3px
+    );
+  }
+  .active-tab-color {
+    color: #ccc51b;
+  }
+}
+
+// ----------------Balances Orders Fixed Styles End---------------------------
+
+#tv_chart_container {
+  height: 100%;
+}
+
+// -----------------Switch Market Dropdown Styles--------------------
+
+.switch-dropdown-popup {
+  box-shadow: 0px 7px 14px rgb(0 0 0 / 8%);
+}
+
+// -----------------Switch Market Dropdown Styles End--------------------
+
+.title3rd-2bpagZ7H {
+  display: none;
+}
+
+[data-theme='Dark'] {
+  .chart1,
+  .order-book-div,
+  .trade-form-div,
+  .recent-trade-div {
+    background-color: #2b2b2b;
+  }
+  .order-book-div {
+    .orderbook-header {
+      border-color: #393939;
+    }
+    .spread-section {
+      background-color: #393939;
+      border-color: transparent;
+    }
+  }
+  .trade-form-div {
+    .tradeform-header {
+      border-color: #393939;
+    }
+    .buy-sell-title {
+      background-color: #393939;
+      border-color: transparent;
+      .active-buy-sel-border {
+        &.buy-sell-buttons {
+          border: none;
+          background: transparent;
+        }
+      }
+      .buy-sell-buttons {
+        border-color: transparent;
+        background-color: #787878;
+      }
+    }
+    .select-option-border {
+      .option-panel {
+        background-color: #393939;
+      }
+      .select-option-words {
+        &:hover {
+          background-color: #787878;
+        }
+      }
+    }
+    .button-group {
+      &-container {
+        background-color: #393939;
+        .active {
+          background-color: #787878;
+        }
+      }
+    }
+  }
+  .recent-trade-div {
+    .recent-market-trade-header {
+      border-color: #393939;
+    }
+    .recent-market-trade-amount {
+      color: #ffffff;
+    }
+    .thin-numbers {
+      color: #ffffff;
+    }
+  }
+  .switch-dropdown-popup {
+    background-color: #393939;
+  }
+  .day-high-low-range {
+    background-color: #787878;
+  }
+}

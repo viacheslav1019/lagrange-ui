@@ -1,0 +1,431 @@
+@import './formul.scss';
+
+.Section5 {
+  // cursor: default;
+  margin-top: -2px;
+  color: #ffffff;
+  background: #000000;
+  .chart-lagrange {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    grid-template-columns: clamp(160px, 45.4166vw, 654px) clamp(
+        140px,
+        44.0277vw,
+        634px
+      );
+    @media screen and (max-width: 505px) {
+      grid-template-columns: clamp(280px, 79.2079vw, 400px);
+    }
+    .chart-pro {
+      right: -15%;
+      top: 0%;
+      transform: translate(15%, 0%);
+      // z-index: 10;
+      @media screen and (max-width: 505px) {
+        right: 0%;
+        top: 20%;
+        transform: translate(0%, -20%);
+        order: 2;
+      }
+      @media screen and (max-width: 400px) {
+        right: 0%;
+        top: 30%;
+        transform: translate(0%, -30%);
+        order: 2;
+      }
+    }
+    .lagrange-plnt {
+      background-image: url('https://i.ibb.co/L5bbk7Q/planet-4.png');
+      height: clamp(300px, 44.0277vw, 634px);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 155%;
+      @media screen and (max-width: 505px) {
+        background-size: 110%;
+        right: 0%;
+        top: 0%;
+        transform: translate(0%, 0%);
+      }
+    }
+  }
+  .orderbook-pro-vers {
+    right: 0%;
+    top: 35%;
+    transform: translate(0%, -35%);
+    z-index: 100 !important;
+    @include displayflex($ai: center, $jc: center);
+    padding: 0px clamp(30px, 8.6111vw, 124px) 0px clamp(30px, 5.7638vw, 83px);
+    @media screen and (max-width: 900px) {
+      flex-direction: column;
+      right: 0%;
+      top: 19%;
+      transform: translate(0%, -19%);
+    }
+    .order-img {
+      background: linear-gradient(129.06deg, #252525 9.44%, #171717 105.84%);
+      @include size(
+        $w: clamp(150px, 23.3333vw, 336px),
+        $h: clamp(190px, 29.7916vw, 429px)
+      );
+      background-image: url('/image/orderbook.png');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 12px;
+      @media screen and (max-width: 900px) {
+        right: 100%;
+        top: 0%;
+        transform: translate(-100%, 0%);
+        background-size: 100%;
+      }
+      @media screen and (max-width: 500px) {
+        right: 50%;
+        top: 10%;
+        transform: translate(-50%, -10%);
+        background-size: 99%;
+      }
+    }
+    .pro-vers-text {
+      @include size(
+        $w: clamp(280px, 59.4444vw, 856px),
+        $h: clamp(250px, 29.7916vw, 429px)
+      );
+      @include displayflex($fd: column, $ai: flex-end, $jc: center);
+      .pro-ver-title {
+        margin-bottom: 16px;
+        @include font(
+          $fm: 'Inter-Black',
+          $fw: 900,
+          $fs: clamp(30px, 3.3333vw, 48px),
+          $c: #ffffff,
+          $ta: right,
+          $ls: 0.5px
+        );
+      }
+      .pro-ver-cont {
+        opacity: 0.4;
+        @include font(
+          $fm: 'Inter-Regular',
+          $fw: 400,
+          $fs: clamp(14px, 1.25vw, 18px),
+          $c: #ffffff,
+          $ta: right,
+          $ls: 0.5px
+        );
+      }
+      .pro-ver-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        @include size(
+          $w: clamp(120px, 13.4027vw, 193px),
+          $h: clamp(35px, 3.6111vw, 52px)
+        );
+        @include font(
+          $fm: 'RedHatDisplay-Bold',
+          $fw: 700,
+          $fs: clamp(12px, 1.25vw, 16px),
+          $c: #ffffff
+        );
+        @include mp($m: clamp(20px, 2.5vw, 36px) 0 0 0);
+        background: #fe9093;
+        border-radius: 4px;
+      }
+    }
+  }
+}
+
+// -----------------------------Component6-----------------------------
+
+.Component6 {
+  // cursor: default;
+  margin-top: -220px;
+  color: #ffffff;
+  background: #000000;
+  @include mp($p: 0 clamp(20px, 9.0277vw, 130px));
+  background-image: url('https://i.ibb.co/5xRn895/galaxy-3.png');
+  height: clamp(1000px, 104.0277vw, 1498px);
+  background-position: bottom -5vw left;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100%;
+  border-radius: 0% 0% 0 0;
+  z-index: 1;
+  @include displayflex($fd: column, $ai: center, $jc: center);
+  @media screen and (max-width: 900px) {
+    height: 970px;
+    margin-top: -200px;
+  }
+  @media screen and (max-width: 650px) {
+    height: 1150px;
+  }
+  @media screen and (max-width: 484px) {
+    height: 1180px;
+  }
+  @media screen and (max-width: 403px) {
+    height: 1400px;
+  }
+  @media screen and (max-width: 360px) {
+    height: 1450px;
+  }
+
+  .joinfast-and-sosialm {
+    @include mp($m: clamp(50px, 16.0416vw, 231px) 0 0 0);
+    width: 100%;
+    @include displayflex($ai: flex-start, $jc: space-between);
+    @media screen and (max-width: 650px) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+    }
+    @media screen and (max-width: 400px) {
+      margin-top: 170px;
+    }
+    .join-fast {
+      width: clamp(200px, 24.7916vw, 357px);
+      @media screen and (max-width: 650px) {
+        width: clamp(250px, 76.923vw, 500px);
+        margin-top: 200px;
+      }
+      .mini-connect-title {
+        text-transform: uppercase;
+        @include font(
+          $fm: 'RedHatDisplay-Bold',
+          $fw: 700,
+          $fs: clamp(10px, 0.9722vw, 14px),
+          $c: #5e5e5e,
+          $ta: left,
+          $ls: 0.5px
+        );
+      }
+      .join-main {
+        white-space: nowrap;
+        @include font(
+          $fm: 'Inter-Black',
+          $fw: 900,
+          $fs: clamp(25px, 3.3333vw, 48px),
+          $c: #ffffff,
+          $ta: left,
+          $ls: 0.5px
+        );
+      }
+    }
+    .sosial-media-part {
+      @include displayflex($fd: column, $ai: flex-end, $jc: center);
+      grid-gap: clamp(20px, 3.8888vw, 56px);
+      @media screen and (max-width: 650px) {
+        margin-top: 40px;
+        align-self: flex-end;
+      }
+      .twitter-follow {
+        figure {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+        @include mp(
+          $p: clamp(20px, 2.7777vw, 40px) clamp(20px, 3.3333vw, 48px)
+        );
+        width: clamp(290px, 47.9166vw, 690px);
+        background: linear-gradient(129.06deg, #252525 9.44%, #171717 105.84%);
+        border-radius: 12px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @media screen and (max-width: 650px) {
+          width: clamp(250px, 76.923vw, 500px);
+        }
+        .twitter-title {
+          @include font(
+            $fm: 'RedHatDisplay-Bold',
+            $fw: 700,
+            $fs: clamp(16px, 1.6666vw, 24px),
+            $c: #ffffff,
+            $ta: left
+          );
+        }
+        .twitter-text {
+          opacity: 0.5;
+          @include font(
+            $fm: 'Inter-Regular',
+            $fw: 400,
+            $fs: clamp(12px, 1.25vw, 18px),
+            $c: #ffffff,
+            $ta: left,
+            $ls: 0.5px
+          );
+        }
+        .fa-twitter {
+          margin-right: 25px;
+          font-size: clamp(28px, 3.1944vw, 30px);
+          background: #ffffff;
+          padding: 8px;
+          color: #454545;
+          border-radius: 4px;
+        }
+        .fa-arrow-up-right-from-square {
+          opacity: 0.5;
+        }
+      }
+      .discord-follow {
+        figure {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+        @include mp(
+          $p: clamp(20px, 2.7777vw, 40px) clamp(20px, 3.3333vw, 48px)
+        );
+        width: clamp(260px, 40.8333vw, 588px);
+        background: linear-gradient(129.06deg, #252525 9.44%, #171717 105.84%);
+        border-radius: 12px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        grid-template-columns: repeat(3, auto);
+        @media screen and (max-width: 650px) {
+          width: clamp(220px, 69.2307vw, 450px);
+        }
+        .discord-title {
+          @include font(
+            $fm: 'Roboto',
+            $fw: 700,
+            $fs: clamp(16px, 1.6666vw, 24px),
+            $c: #ffffff,
+            $ta: left
+          );
+        }
+        .discord-text {
+          opacity: 0.5;
+          @include font(
+            $fm: 'Roboto',
+            $fw: 400,
+            $fs: clamp(14px, 1.25vw, 18px),
+            $c: #ffffff,
+            $ta: left,
+            $ls: 0.5px
+          );
+        }
+        .fa-discord {
+          margin-right: 25px;
+          font-size: clamp(28px, 3.1944vw, 30px);
+          background: #ffffff;
+          padding: 8px;
+          color: #454545;
+          border-radius: 4px;
+        }
+        .fa-arrow-up-right-from-square {
+          opacity: 0.5;
+        }
+      }
+      .medium-follow {
+        figure {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+        }
+        @include mp(
+          $p: clamp(20px, 2.7777vw, 40px) clamp(20px, 3.3333vw, 48px)
+        );
+        width: clamp(230px, 31.875vw, 459px);
+        background: linear-gradient(129.06deg, #252525 9.44%, #171717 105.84%);
+        border-radius: 12px;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @media screen and (max-width: 650px) {
+          width: clamp(190px, 61.5384vw, 400px);
+        }
+        .medium-title {
+          @include font(
+            $fm: 'Roboto',
+            $fw: 700,
+            $fs: clamp(16px, 1.6666vw, 24px),
+            $c: #ffffff,
+            $ta: left
+          );
+        }
+        .medium-text {
+          opacity: 0.5;
+          @include font(
+            $fm: 'Roboto',
+            $fw: 400,
+            $fs: clamp(14px, 1.25vw, 18px),
+            $c: #ffffff,
+            $ta: left,
+            $ls: 0.5px
+          );
+        }
+        .fa-medium {
+          margin-right: 25px;
+          font-size: clamp(28px, 3.1944vw, 46px);
+          font-size: clamp(28px, 3.1944vw, 30px);
+          background: #ffffff;
+          padding: 8px;
+          color: #454545;
+          border-radius: 4px;
+        }
+        .fa-arrow-up-right-from-square {
+          opacity: 0.5;
+        }
+      }
+    }
+  }
+  .receive-input {
+    @include displayflex($fd: column, $ai: center, $jc: center);
+    @include mp($m: clamp(50px, 11.5972vw, 167px) 0 0 0);
+    .receive-new {
+      @include font(
+        $fm: 'Inter-Black',
+        $fw: 900,
+        $fs: clamp(30px, 3.3333vw, 48px),
+        $c: #ffffff,
+        $ta: center,
+        $ls: 0.5px
+      );
+    }
+    .recive-mini-cont {
+      @include font(
+        $fm: 'Inter-Regular',
+        $fw: 400,
+        $fs: clamp(14px, 1.25vw, 18px),
+        $c: #ffffff,
+        $ta: center,
+        $ls: 0.5px
+      );
+      opacity: 0.4;
+    }
+    .input-i {
+      @include mp($m: clamp(30px, 3.8888vw, 56px) 0 0 0);
+      input {
+        @include mp($p: 0px 24px);
+        @include size(
+          $w: clamp(250px, 27.6388vw, 398px),
+          $h: clamp(45px, 4.1666vw, 60px)
+        );
+        @include font(
+          $fm: 'RedHatDisplay-Regular',
+          $fw: 400,
+          $fs: clamp(14px, 1.25vw, 18px),
+          $c: #767670,
+          $ta: left,
+          $ls: 0.5px
+        );
+        background: linear-gradient(129.06deg, #252525 9.44%, #171717 105.84%);
+        border-radius: 8px;
+        outline: none;
+      }
+      ::placeholder {
+        color: #767670;
+      }
+      i {
+        color: #767670;
+        right: 250%;
+        top: 0%;
+        transform: translate(-250%, 0%);
+      }
+    }
+  }
+}

@@ -1,0 +1,256 @@
+@import './formul.scss';
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap');
+
+// dark theme ///
+[data-theme='Dark'] {
+  .topbar {
+    .burger {
+      color: #fff;
+    }
+    nav {
+      .img {
+        background-image: url('https://i.ibb.co/Pr5pF0M/Lagrange-logo-light.png');
+      }
+      ul {
+        @media screen and (max-width: 768px) {
+          background: #333333;
+          color: #fff;
+        }
+        li {
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+////////////////////////////
+
+.topbar {
+  font-family: 'Montserrat';
+  z-index: 1000;
+  padding: 25px clamp(10px, 11.8vw - 50px, 120px);
+  @media screen and (max-width: 1200px) {
+    padding: 25px 20px;
+  }
+  @media screen and (max-width: 768px) {
+    display: block;
+    padding: 7px 10px;
+  }
+
+  /// burger and cancel //////
+  .burger {
+    z-index: 10;
+    display: none;
+    color: #000;
+    margin-left: 10px;
+    margin-top: 5px;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+
+    i {
+      font-size: 20px;
+    }
+  }
+
+  .fa-times {
+    -webkit-filter: grayscale(1) invert(1);
+    filter: grayscale(1) invert(1);
+    width: 20px;
+    height: 20px;
+    display: none;
+    font-size: 40px;
+    font-weight: 700;
+    color: #fff;
+
+    @media screen and (max-width: 768px) {
+      display: block;
+    }
+  }
+
+  ///////////////////////////
+
+  nav {
+    @include displayflex($fd: row, $ai: center, $jc: space-between);
+    .img {
+      width: clamp(100px, 100px + 6.94vw, 200px);
+      height: 48px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url('https://i.ibb.co/YtTr6zg/Lagrange-logo-dark.png');
+      @media screen and (max-width: 768px) {
+        height: 38px;
+      }
+    }
+
+    ul {
+      @include displayflex($fd: row, $ai: center, $jc: space-between);
+      font-size: clamp(16px, 1.25vw, 18px);
+      font-weight: 500;
+
+      @media screen and (max-width: 768px) {
+        @include displayflex($fd: column, $ai: center, $jc: flex-start);
+        position: fixed;
+        right: 0%; //other ideya right:0%; width:0% jquery => width:55%
+        top: 0%;
+        background: linear-gradient(
+          145.83deg,
+          #ff8b99 19.04%,
+          #fca27d 74.02%,
+          #ffcba5 97.03%
+        );
+        visibility: hidden;
+        color: #fff;
+        z-index: 1000;
+        width: 80%;
+        padding: 30px;
+        height: 100vh;
+      }
+
+      .active {
+        font-weight: 700;
+      }
+
+      li {
+        margin-right: clamp(10px, 4.25vw, 64px);
+        margin-top: 10px;
+        height: 40px;
+        width: auto;
+        white-space: nowrap;
+
+        a {
+          @include displayflex($fd: column, $ai: center, $jc: center);
+
+          .activetop {
+            width: 7px;
+            height: 7px;
+            background: #ff9193;
+            border-radius: 50%;
+            margin-top: 2px;
+          }
+
+          .deactivetop {
+            width: 0px;
+            height: 0px;
+          }
+        }
+
+        &:last-child {
+          margin-right: 0px;
+        }
+
+        &:first-child {
+          display: none;
+          margin-right: 0px;
+          margin-top: 0px;
+
+          @media screen and (max-width: 768px) {
+            @include displayflex($ai: center, $jc: flex-end);
+            width: 100%;
+          }
+        }
+
+        @media screen and (max-width: 768px) {
+          margin-right: 0px;
+          margin-top: 50px;
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .ConnectWalletButton {
+    .walletlist {
+      font-size: 12px;
+      font-weight: 600;
+      border-radius: 0px !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 1000 !important;
+      position: sticky;
+      background: linear-gradient(
+        152.97deg,
+        rgba(38, 38, 38, 1) 0%,
+        rgba(130, 130, 130, 1) 100%
+      );
+      box-shadow: 2px 4px 9px rgba(0, 0, 0, 0.25);
+      border-radius: 4px;
+      color: #fff;
+
+      &:hover {
+        background: linear-gradient(
+          145.83deg,
+          #ff8b99 19.04%,
+          #fca27d 74.02%,
+          #ffcba5 97.03%
+        );
+      }
+
+      .imgspan {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 70%;
+
+        img {
+          height: 20px;
+          width: 20px;
+          margin-right: 10px;
+        }
+      }
+    }
+
+    button {
+      font-family: 'Montserrat';
+      font-style: normal;
+      position: relative;
+      text-transform: uppercase;
+      color: #fff;
+      height: 41px;
+      font-weight: 700;
+      font-size: clamp(13px, 0.97vw, 14px);
+      padding: 6px 0px;
+      width: clamp(140px, 12.98vw, 187px);
+      background: linear-gradient(
+        145.83deg,
+        #ff8b99 19.04%,
+        #fca27d 74.02%,
+        #ffcba5 97.03%
+      );
+      border-radius: 6px;
+
+      @media screen and (max-width: 768px) {
+        width: 200px;
+      }
+
+      &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: -10px;
+        right: 0px;
+        background: linear-gradient(
+          145.83deg,
+          #ff8b99 19.04%,
+          #fca27d 74.02%,
+          #ffcba5 97.03%
+        );
+        z-index: -1;
+        filter: blur(22px);
+        transform: scale(1, 0.8) translateY(20px);
+        opacity: 0;
+        transition: all 0.6s;
+      }
+
+      &:hover::before {
+        opacity: 1;
+      }
+    }
+  }
+}

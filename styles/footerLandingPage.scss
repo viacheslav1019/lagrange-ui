@@ -1,0 +1,47 @@
+@import './formul.scss';
+.FooterLanding {
+  // cursor: default;
+  margin-top: clamp(100px, 11.8055vw, 170px);
+  width: 100%;
+  .hr {
+    background: rgba(196, 196, 196, 0.2);
+    width: 100%;
+    height: 1px;
+  }
+  .general-footer {
+    @include mp(
+      $p: clamp(30px, 3.4027vw, 49px) 0 clamp(30px, 1.7638vw, 83px) 0
+    );
+    @include displayflex($ai: center, $jc: space-between);
+    width: 100%;
+    @include media($d: 900px, $fd: column);
+    .img-privacy {
+      @include displayflex($ai: center, $jc: space-between);
+      @include font(
+        $fm: 'RedHatDisplay-Regular',
+        $fw: 400,
+        $fs: clamp(12px, 1.0416vw, 15px),
+        $c: #ffffff,
+        $ta: center
+      );
+      img {
+        margin-right: clamp(15px, 2.3611vw, 34px);
+        width: clamp(80px, 9.4444vw, 136px);
+        height: clamp(23px, 2.2916vw, 33px);
+      }
+      .privacy-policy {
+        opacity: 0.2;
+      }
+    }
+    .footer-address {
+      @include font(
+        $fm: 'RedHatDisplay-Regular',
+        $fw: 400,
+        $fs: clamp(10px, 1.0416vw, 15px),
+        $c: #ffffff,
+        $ta: center
+      );
+      @include media($d: 900px, $m: 5px 0 0 0);
+    }
+  }
+}

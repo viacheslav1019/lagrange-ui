@@ -1,0 +1,21 @@
+{
+  "short_name": "Lagrange",
+  "name": "Lagrange",
+  "description": "Lagrange offers a fully decentralized 24/7 FX market that does not require any broker or settlement periods.",
+  "icons": [
+    {
+      "src": "192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff"
+}
